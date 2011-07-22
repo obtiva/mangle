@@ -1,0 +1,15 @@
+%p
+  %b Name:
+  = h @story.name
+%p
+  %b Narrative:
+  = h @story.narrative
+%p
+  %b Estimate:
+  = h @story.estimate
+%p
+  %b Priority:
+  = h @story.priority
+= link_to 'Edit', edit_story_path(@story)
+|
+\#{link_to 'Back', stories_path}

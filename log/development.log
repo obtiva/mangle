@@ -1,0 +1,74 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (61.7ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (281.6ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStories (20110722125522)
+  [4;36;1mSQL (105.9ms)[0m   [0;1mCREATE TABLE `stories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `narrative` text, `estimate` int(11), `priority` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110722125522')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `stories`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `stories`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `stories`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-07-22 08:10:22) [GET]
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM `stories` [0m
+Rendering template within layouts/stories
+Rendering stories/index
+Completed in 14ms (View: 11, DB: 1) | 200 OK [http://localhost/stories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoriesController#new (for 127.0.0.1 at 2011-07-22 08:10:24) [GET]
+  [4;35;1mStory Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `stories`[0m
+Rendering template within layouts/stories
+Rendering stories/new
+DEPRECATION WARNING: Kernel#returning has been deprecated in favor of Object#tap. (called from content_tag at /Users/nrappin/.rvm/gems/ree-1.8.7-2011.03@mangle/gems/haml-3.0.13/rails/../lib/haml/helpers/action_view_mods.rb:110)
+DEPRECATION WARNING: Kernel#returning has been deprecated in favor of Object#tap. (called from content_tag_with_haml at /Users/nrappin/.rvm/gems/ree-1.8.7-2011.03@mangle/gems/haml-3.0.13/rails/../lib/haml/helpers/action_view_mods.rb:110)
+DEPRECATION WARNING: Kernel#returning has been deprecated in favor of Object#tap. (called from content_tag_with_haml at /Users/nrappin/.rvm/gems/ree-1.8.7-2011.03@mangle/gems/haml-3.0.13/rails/../lib/haml/helpers/action_view_mods.rb:110)
+DEPRECATION WARNING: Kernel#returning has been deprecated in favor of Object#tap. (called from content_tag_with_haml at /Users/nrappin/.rvm/gems/ree-1.8.7-2011.03@mangle/gems/haml-3.0.13/rails/../lib/haml/helpers/action_view_mods.rb:110)
+DEPRECATION WARNING: Kernel#returning has been deprecated in favor of Object#tap. (called from content_tag_with_haml at /Users/nrappin/.rvm/gems/ree-1.8.7-2011.03@mangle/gems/haml-3.0.13/rails/../lib/haml/helpers/action_view_mods.rb:110)
+DEPRECATION WARNING: Kernel#returning has been deprecated in favor of Object#tap. (called from content_tag_with_haml at /Users/nrappin/.rvm/gems/ree-1.8.7-2011.03@mangle/gems/haml-3.0.13/rails/../lib/haml/helpers/action_view_mods.rb:110)
+Completed in 56ms (View: 51, DB: 2) | 200 OK [http://localhost/stories/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoriesController#create (for 127.0.0.1 at 2011-07-22 08:10:30) [POST]
+  Parameters: {"commit"=>"Create", "story"=>{"narrative"=>"A", "name"=>"Test", "priority"=>"1", "estimate"=>"1"}, "authenticity_token"=>"w8xvp8fI6ZqdkPU+dZref8nORuoMVXyxGx3rJOFHy2g="}
+  [4;36;1mStory Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `stories`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mStory Create (0.3ms)[0m   [0;1mINSERT INTO `stories` (`name`, `narrative`, `created_at`, `updated_at`, `priority`, `estimate`) VALUES('Test', 'A', '2011-07-22 13:10:31', '2011-07-22 13:10:31', 1, 1)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/stories/1
+Completed in 9ms (DB: 2) | 302 Found [http://localhost/stories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-07-22 08:10:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStory Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `stories`[0m
+  [4;35;1mStory Load (0.2ms)[0m   [0mSELECT * FROM `stories` WHERE (`stories`.`id` = 1) [0m
+Rendering template within layouts/stories
+Rendering stories/show
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://localhost/stories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-07-22 08:10:33) [GET]
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM `stories` [0m
+Rendering template within layouts/stories
+Rendering stories/index
+  [4;35;1mStory Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `stories`[0m
+Completed in 9ms (View: 3, DB: 3) | 200 OK [http://localhost/stories]

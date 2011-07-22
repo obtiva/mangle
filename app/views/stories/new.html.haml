@@ -1,0 +1,22 @@
+%h1 New story
+- form_for(@story) do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br/
+    = f.text_field :name
+  %p
+    = f.label :narrative
+    %br/
+    = f.text_area :narrative
+  %p
+    = f.label :estimate
+    %br/
+    = f.text_field :estimate
+  %p
+    = f.label :priority
+    %br/
+    = f.text_field :priority
+  %p
+    = f.submit 'Create'
+= link_to 'Back', stories_path
