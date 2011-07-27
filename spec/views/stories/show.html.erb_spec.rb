@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "/stories/show.html.erb" do
+describe "/stories/show.html.haml" do
   include StoriesHelper
   before(:each) do
     assigns[:story] = @story = stub_model(Story,

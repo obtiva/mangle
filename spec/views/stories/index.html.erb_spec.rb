@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "/stories/index.html.erb" do
+describe "/stories/index.html.haml" do
   include StoriesHelper
 
   before(:each) do
