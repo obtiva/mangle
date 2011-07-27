@@ -10,6 +10,11 @@ module NavigationHelpers
     
     when /the home\s?page/
       '/'
+    when /the new sort_stories page/
+      new_sort_stories_path
+    when /the stories page/
+      stories_path
+
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

@@ -6,11 +6,11 @@
     %th Estimate
     %th Priority
   - @stories.each do |story|
-    %tr
-      %td= h story.name
-      %td= h story.narrative
-      %td= h story.estimate
-      %td= h story.priority
+    %tr.story_row
+      %td.story_name= h story.name
+      %td.story_narrative= h story.narrative
+      %td.story_estimate= h story.estimate
+      %td.story_priority= h story.priority
       %td= link_to 'Show', story
       %td= link_to 'Edit', edit_story_path(story)
       %td= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete

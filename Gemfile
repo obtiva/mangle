@@ -5,6 +5,7 @@ gem "mysql"
 gem "haml", "3.0.13"
 
 group :development, :test do
+  gem "launchy"
   gem "rspec", "1.3.0"
   gem "rspec-rails", "1.3.2"
   gem "capybara", "0.4.1.2"
